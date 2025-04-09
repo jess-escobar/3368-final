@@ -1,0 +1,74 @@
+#eye-catch {
+    margin: auto;
+/*    border: 1px dashed red; */
+    max-width: 70rem;
+    margin: 3rem auto 4rem auto;
+}
+
+h1#big-text {
+    color: #1c2021;
+    text-align: center;
+    font-size: 4.5rem;
+    font-weight: 900;
+    padding: 0;
+    margin: 3rem 0;
+}
+
+#cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+a.card-wrapper {
+    display: block;
+    padding: 0;
+    border: .15rem solid #1c2021;
+    width: 24%;
+    height: 19.5rem;
+    text-decoration: none;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+/*    border: 1px solid brown; */
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+p.card-text {
+    text-align: center;
+    color: #1c2021;
+    padding: .5em 0 .5em 0;
+    width: 100%;
+    margin: 0;
+    font-size: 1.5rem;
+    background-color: #f4f5f6;
+    border-top: .15rem solid #1c2021;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+#blurb {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 70rem;
+    margin: 0 auto 3em auto;
+    padding: 0;
+    border: 1px solid black;
+}
+
+#blurb h2 {
+    text-align: center;
+}
+
+#blurb p {
+    text-align: center;
+}
+
+a#fancy-about {
+    margin: 0 auto;
+}
