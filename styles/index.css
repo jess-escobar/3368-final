@@ -72,3 +72,39 @@ p.card-text {
 a#fancy-about {
     margin: 0 auto;
 }
+
+/* 800px media query for laptop/tablet card grid and smaller screens */
+@media screen and (max-width: 800px) {
+    #eye-catch {
+        margin: auto;
+    /*    border: 1px dashed red; */
+        max-width: 70rem;
+        margin: 0 auto;
+    }
+
+    #cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-content: center;
+    }
+
+    a.card-wrapper {
+        display: block;
+        padding: 0;
+        border: .15rem solid #1c2021;
+        width: 95%;
+        height: 17rem;
+        text-decoration: none;
+        margin: 0 0 5% 0;
+    }
+
+    h1#big-text {
+        color: #1c2021;
+        text-align: center;
+        font-size: 3.75rem;
+        font-weight: 900;
+        padding: 0;
+        margin: .25rem 0 1rem 0;
+    }
+}

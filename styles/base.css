@@ -1,7 +1,7 @@
 /* base.css contains only css rules for header and footer */
 
 html {
-    font-size: 17px;
+    font-size: 16px; /* can change to 17, but looks too big on laptops */
     font-family:Arial, Helvetica, sans-serif;
 }
 
@@ -164,5 +164,13 @@ a.f-link {
     a.nav-link {
         text-decoration: underline;
         padding: .5rem .5rem;
+    }
+
+    .f-stack {
+        display: flex;
+        flex-flow: column wrap;
+        width: 90%;
+        padding: 1em 1em;
+        margin: 0 auto;
     }
 }
