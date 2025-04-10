@@ -1,6 +1,5 @@
 #eye-catch {
     margin: auto;
-/*    border: 1px dashed red; */
     max-width: 70rem;
     margin: 3rem auto 4rem auto;
 }
@@ -17,13 +16,15 @@ h1#big-text {
 #cards {
     display: flex;
     justify-content: space-between;
+    margin: 0;
+    padding: 0;
 }
 
 a.card-wrapper {
     display: block;
     padding: 0;
-    border: .15rem solid #1c2021;
-    width: 24%;
+    border: .2rem solid #1c2021;
+    width: 23.5%;
     height: 19.5rem;
     text-decoration: none;
 }
@@ -35,9 +36,25 @@ a.card-wrapper {
     justify-content: flex-end;
 /*    border: 1px solid brown; */
     height: 100%;
-    background-position: center;
-    background-size: cover;
+    background-position: center 38%;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    transition: box-shadow 0.2s ease, transform 0.1s ease;
 }
+
+/* card hover create shadow effect. can inverse so shadow is constant on card, hover removes shadow */
+.card:hover {
+    box-shadow: 4px 4px 0px #1c2021;
+}
+
+.card:active {
+    box-shadow: 0px 0px 0px #1c2021;
+    transition: box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+/* .card, [style^="background-"] {
+    isolation: isolate;
+} excludes card from sandoche's darkmode.js. cannot seem to make card-text not inherit exclusion tho */ 
 
 p.card-text {
     text-align: center;
@@ -47,22 +64,26 @@ p.card-text {
     margin: 0;
     font-size: 1.5rem;
     background-color: #f4f5f6;
-    border-top: .15rem solid #1c2021;
+    border-top: .2rem solid #1c2021;
     text-transform: uppercase;
     font-weight: 500;
 }
 
+/* blurb section */
 #blurb {
     display: flex;
     flex-flow: column nowrap;
     max-width: 70rem;
     margin: 0 auto 3em auto;
     padding: 0;
-    border: 1px solid black;
+    border: 1px dotted black;
 }
 
 #blurb h2 {
     text-align: center;
+    font-size: 2.5rem;
+    padding: 0;
+    margin: 1rem ; 
 }
 
 #blurb p {
@@ -73,38 +94,52 @@ a#fancy-about {
     margin: 0 auto;
 }
 
+
+
+
+
 /* 800px media query for laptop/tablet card grid and smaller screens */
 @media screen and (max-width: 800px) {
     #eye-catch {
-        margin: auto;
-    /*    border: 1px dashed red; */
-        max-width: 70rem;
+        max-width: 85vw;
         margin: 0 auto;
+        padding: 0;
     }
 
     #cards {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        gap: 2.5%;
+        padding-bottom: 3rem;
     }
 
     a.card-wrapper {
         display: block;
         padding: 0;
-        border: .15rem solid #1c2021;
-        width: 95%;
+        width: 98%;
         height: 17rem;
         text-decoration: none;
-        margin: 0 0 5% 0;
+        margin: auto;
     }
 
     h1#big-text {
         color: #1c2021;
         text-align: center;
-        font-size: 3.75rem;
+        font-size: 3.4rem;
         font-weight: 900;
         padding: 0;
         margin: .25rem 0 1rem 0;
+    }
+
+    #blurb {
+        display: flex;
+        flex-flow: column nowrap;
+        max-width: 85vw; /* match with #eye-catch max-width */
+        margin: 0 auto 3em auto;
+        padding: 0;
+        border: 1px solid black;
     }
 }

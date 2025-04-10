@@ -23,7 +23,7 @@ header {
     margin: 0 -1vw; /* extends l+r border to ends of page */
     padding: 0 .9vw;
     min-height: 10vh;
-    border-bottom: .12rem solid #1c2021;
+    border-bottom: .13rem solid #1c2021;
 }
 
 figure#h-logo {
@@ -69,7 +69,7 @@ nav#h-nav {
 nav#h-nav:before {
     content: "";
     background: #1c2021;
-    width: .12rem;
+    width: .13rem;
     height: 4.25rem;
     margin: auto 0;
 }
@@ -80,9 +80,10 @@ a.nav-link {
     text-align: center;
     text-transform: uppercase;
     margin: auto;
-    padding: 4.5vh .25rem;
+    padding: 0 .25rem;
     font-weight: 600;
     color: #1c2021;
+    font-size: 1.25rem;
 }
 
 a.nav-link:hover {
@@ -136,6 +137,7 @@ footer {
     padding: .25em 0 .25em .25em;
     margin: 0;
     color: #384042;
+    font-weight: 600;
 } 
 
 a.f-link {
@@ -145,10 +147,17 @@ a.f-link {
     display: block;
 }
 
-/* 660px and smaller media query */
-@media screen and (max-width: 660px) {
+/* a class intended to bold current url links. add "url-current" to element's class. do not use for nav links  */
+a.url-current {
+    font-weight: 600;
+}
+
+/* 720 px and smaller media query */
+@media screen and (max-width: 720px) {
     header {
         border-bottom: none;
+        display: flex;
+        flex-flow: column nowrap;
     }
 
     footer {
@@ -164,6 +173,7 @@ a.f-link {
     a.nav-link {
         text-decoration: underline;
         padding: .5rem .5rem;
+        font-size: 1.1rem;
     }
 
     .f-stack {
