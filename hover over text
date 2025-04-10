@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.hide
+{display:  none;}
+.myDIV:hover + .hide
+{display: block;
+color: red;}
+
+</style>
+</head>
+<body>
+<div class="myDIV">Educational content that goes in here.</div>
+<div class="hide">This is the answer.</div>
+</body>
+</html>
