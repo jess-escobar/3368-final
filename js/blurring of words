@@ -3,7 +3,7 @@
 <head> 
 <meta charset="UTF-8">
 <style>
-body{
+body {
 background-color:#111;
 color: white;
 padding: 50px;}
@@ -24,12 +24,13 @@ filter: blur(0);}
 <body>
 
 <p>
-<span class="blur-word" id="hiddenWord">This sentence should be blurred.</span>
+<span class="blur-word" id="toggleWord">This sentence should be blurred.</span>
 </p>
 
 <script>
-document.getElementById("hiddenWord").addEventListener("click", function () {
-this.classList.add("revealed");});
+const word= document.getElementById("toggleWord");
+word.addEventListener("click", function () {
+this.classList.toggle("revealed");});
 </script>
 </body>
 </html>
